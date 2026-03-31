@@ -1,0 +1,125 @@
+.rate-ticker {
+  position: fixed;
+  z-index: 50;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid rgb(212 212 212);
+  background: rgb(255 255 255 / 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 0.75rem;
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0));
+  box-shadow: 0 -4px 20px rgb(0 0 0 / 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  .rate-ticker {
+    border-top-color: rgb(64 64 64);
+    background: rgb(10 10 10 / 0.95);
+    box-shadow: 0 -4px 20px rgb(0 0 0 / 0.35);
+  }
+}
+
+.rate-ticker__wrap {
+  margin: 0 auto;
+  max-width: 28rem;
+}
+
+.rate-ticker__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: var(--foreground, #171717);
+}
+
+@media (prefers-color-scheme: dark) {
+  .rate-ticker__table {
+    color: var(--foreground, #ededed);
+  }
+}
+
+.rate-ticker__caption {
+  caption-side: top;
+  text-align: left;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgb(115 115 115);
+  padding-bottom: 0.35rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rate-ticker__caption {
+    color: rgb(163 163 163);
+  }
+}
+
+.rate-ticker__table thead th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: rgb(82 82 82);
+  padding: 0.2rem 0.5rem 0.35rem 0;
+  border-bottom: 1px solid rgb(229 229 229);
+}
+
+.rate-ticker__table thead th:last-child {
+  text-align: right;
+  padding-right: 0;
+  padding-left: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rate-ticker__table thead th {
+    color: rgb(163 163 163);
+    border-bottom-color: rgb(64 64 64);
+  }
+}
+
+.rate-ticker__table tbody td {
+  padding: 0.4rem 0.5rem 0.4rem 0;
+  vertical-align: top;
+  border-bottom: 1px solid rgb(245 245 245);
+}
+
+.rate-ticker__table tbody td:last-child {
+  padding-right: 0;
+  padding-left: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rate-ticker__table tbody td {
+    border-bottom-color: rgb(38 38 38);
+  }
+}
+
+.rate-ticker__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rate-ticker__rate {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.rate-ticker__foot {
+  text-align: center;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: rgb(115 115 115);
+  padding: 0.45rem 0 0;
+  border-top: 1px solid rgb(229 229 229);
+}
+
+@media (prefers-color-scheme: dark) {
+  .rate-ticker__foot {
+    color: rgb(163 163 163);
+    border-top-color: rgb(64 64 64);
+  }
+}
